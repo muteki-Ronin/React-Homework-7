@@ -1,5 +1,5 @@
 // CORE
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { routers } from "../../core/config";
 // CUSTOM-HOOKS
 import { useThem } from "../../hook/useThem";
@@ -30,18 +30,46 @@ export const Header = () => {
       }
     >
       <div className="nav-btn_panel">
-        <button>
-          <Link to={routers.home}>{languageData.homePage}</Link>
-        </button>
-        <button>
-          <Link to={routers.login}>{languageData.loginPage}</Link>
-        </button>
-        <button>
-          <Link to={routers.starapp}>{languageData.starAppPage}</Link>
-        </button>
-        <button>
-          <Link to={routers.help}>{languageData.helpPage}</Link>
-        </button>
+        <NavLink
+          to={routers.home}
+          className={
+            themType
+              ? "header-link header-link_dark"
+              : "header-link header-link_light"
+          }
+        >
+          {languageData.homePage}
+        </NavLink>
+        <NavLink
+          to={routers.login}
+          className={
+            themType
+              ? "header-link header-link_dark"
+              : "header-link header-link_light"
+          }
+        >
+          {languageData.loginPage}
+        </NavLink>
+        <NavLink
+          to={routers.starapp}
+          className={
+            themType
+              ? "header-link header-link_dark"
+              : "header-link header-link_light"
+          }
+        >
+          {languageData.starAppPage}
+        </NavLink>
+        <NavLink
+          to={routers.help}
+          className={
+            themType
+              ? "header-link header-link_dark"
+              : "header-link header-link_light"
+          }
+        >
+          {languageData.helpPage}
+        </NavLink>
       </div>
 
       <h1
