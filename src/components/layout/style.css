@@ -1,0 +1,22 @@
+.layout {
+  width: 100%;
+  min-height: 100%;
+}
+
+.dark {
+  background-color: #293234;
+}
+
+.light {
+  background-color: #b4d0ca
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: auto;
+  gap: 20px;
+}

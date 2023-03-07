@@ -1,0 +1,23 @@
+.star-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-panel {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.btn {
+  color: rgba(129, 95, 7, 0.926);
+}
+
+.btn-active {
+  color: rgba(222, 28, 28, 0.942);
+}

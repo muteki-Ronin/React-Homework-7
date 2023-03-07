@@ -1,0 +1,11 @@
+.notfound-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.notfound-title {
+  font-size: 8rem;
+}

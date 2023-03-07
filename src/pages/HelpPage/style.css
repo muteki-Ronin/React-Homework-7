@@ -1,0 +1,14 @@
+.helppage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+
+}
+
+.helppage-title {
+  text-align: center;
+  font-size: 5rem;
+  color: whitesmoke;
+}

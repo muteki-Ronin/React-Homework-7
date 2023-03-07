@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body, 
+#react-root {
+  height: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  max-width: 110px;
+  min-height: 40px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+button:hover {
+  box-shadow: #FC0 1px 0 10px;
+}
+
+
+
+
+
+
+
+
