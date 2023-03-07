@@ -1,12 +1,10 @@
-// CORE
-import { useContext } from "react";
-// CONTEXT
-import { ThemeContext } from "../../context/ThemeProvider";
+// CUSTOM-HOOKS
+import { useThem } from "../../hook/useThem";
 // STYLES
 import "./style.css";
 
 export const ListItem = ({ item, index, clickItem }) => {
-  const { themType } = useContext(ThemeContext);
+  const { themType } = useThem();
 
   const handleClick = () => {
     clickItem(index);

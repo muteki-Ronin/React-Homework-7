@@ -1,16 +1,15 @@
 // CORE
-import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { routers } from "../../core/config";
-// CONTEXT
-import { ThemeContext } from "../../context/ThemeProvider";
-import { LanguageContext } from "../../context/LanguageProvider";
+// CUSTOM-HOOKS
+import { useThem } from "../../hook/useThem";
+import { useLang } from "../../hook/useLang";
 // STYLES
 import "./style.css";
 
 export const Header = () => {
-  const { themType, setThemType } = useContext(ThemeContext);
-  const { languageData, getLanguageData } = useContext(LanguageContext);
+  const { themType, setThemType } = useThem();
+  const { languageData, getLanguageData } = useLang();
 
   const toggleThem = () => {
     setThemType(!themType);

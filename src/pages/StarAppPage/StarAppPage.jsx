@@ -1,18 +1,17 @@
 // CORE
-import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 // COMPONENTS
 import { ListItems } from "../../components/listItems/ListItems";
 import { Loader } from "../../components/loader/Loader";
-// CONTEXT
-import { LanguageContext } from "../../context/LanguageProvider";
-import { AuthContext } from "../../context/AuthProvider";
+// CUSTOM-HOOKS
+import { useAuth } from "../../hook/useAuth";
+import { useLang } from "../../hook/useLang";
 // STYLE
 import "./style.css";
 
 export const StarAppPage = ({ state, handleClick }) => {
-  const { languageData } = useContext(LanguageContext);
-  const { signOut } = useContext(AuthContext);
+  const { languageData } = useLang();
+  const { signOut } = useAuth();
   const navigate = useNavigate();
 
   const goBack = () => {

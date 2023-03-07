@@ -1,11 +1,10 @@
 // CORE
-import { useContext } from "react";
 import RingLoader from "react-spinners/RingLoader";
-// CONTEXT
-import { ThemeContext } from "../../context/ThemeProvider";
+// CUSTOM-HOOKS
+import { useThem } from "../../hook/useThem";
 
 export const Loader = () => {
-  const { themType } = useContext(ThemeContext);
+  const { themType } = useThem();
 
   return (
     <RingLoader

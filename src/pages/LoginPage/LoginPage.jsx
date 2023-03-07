@@ -1,18 +1,17 @@
 // CORE
-import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { routers } from "../../core/config";
-// CONTEXT
-import { ThemeContext } from "../../context/ThemeProvider";
-import { LanguageContext } from "../../context/LanguageProvider";
-import { AuthContext } from "../../context/AuthProvider";
+// CUSTOM-HOOKS
+import { useThem } from "../../hook/useThem";
+import { useLang } from "../../hook/useLang";
+import { useAuth } from "../../hook/useAuth";
 //STYLE
 import "./style.css";
 
 export const LoginPage = () => {
-  const { themType } = useContext(ThemeContext);
-  const { languageData } = useContext(LanguageContext);
-  const { user, signIn, signOut } = useContext(AuthContext);
+  const { themType } = useThem();
+  const { languageData } = useLang();
+  const { user, signIn, signOut } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {

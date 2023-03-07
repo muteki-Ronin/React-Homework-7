@@ -1,16 +1,15 @@
 // CORE
-import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { routers } from "../../core/config";
-// CONTEXT
-import { ThemeContext } from "../../context/ThemeProvider";
-import { LanguageContext } from "../../context/LanguageProvider";
+// CUSTOM-HOOKS
+import { useThem } from "../../hook/useThem";
+import { useLang } from "../../hook/useLang";
 // STYLE
 import "./style.css";
 
 export const HomePage = () => {
-  const { themType } = useContext(ThemeContext);
-  const { languageData } = useContext(LanguageContext);
+  const { themType } = useThem();
+  const { languageData } = useLang();
 
   return (
     <div

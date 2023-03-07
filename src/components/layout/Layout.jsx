@@ -1,15 +1,14 @@
 // CORE
-import { useContext } from "react";
 import { Outlet } from "react-router-dom";
 // COMPONENTS
 import { Header } from "../../components/header/Header";
-// CONTEXT
-import { ThemeContext } from "../../context/ThemeProvider";
+// CUSTOM-HOOKS
+import { useThem } from "../../hook/useThem";
 // STYLE
 import "./style.css";
 
 export const Layout = () => {
-  const { themType } = useContext(ThemeContext);
+  const { themType } = useThem();
   return (
     <div className={themType ? "layout dark" : "layout light"}>
       <Header />

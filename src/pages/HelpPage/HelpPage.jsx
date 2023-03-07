@@ -1,13 +1,12 @@
 // CORE
-import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-// CONTEXT
-import { LanguageContext } from "../../context/LanguageProvider";
+// CUSTOM-HOOKS
+import { useLang } from "../../hook/useLang";
 // STYLE
 import "./style.css";
 
 export const HelpPage = () => {
-  const { languageData } = useContext(LanguageContext);
+  const { languageData } = useLang();
   const navigate = useNavigate();
   const goBack = () => {
     navigate(-1);
