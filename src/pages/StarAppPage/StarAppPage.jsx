@@ -47,13 +47,13 @@ export const StarAppPage = ({ state, handleClick }) => {
           {languageData.starShipsBtn}
         </button>
       </div>
+      <button onClick={goBack}>{languageData.previousPageBtn}</button>
       <button onClick={logOut}>{languageData.logOutBtn}</button>
       {state.isLoading ? (
         <Loader />
       ) : (
         <ListItems items={state.items} type={state.itemType} />
       )}
-      <button onClick={goBack}>{languageData.previousPageBtn}</button>
     </div>
   );
 };
